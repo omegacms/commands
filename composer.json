@@ -1,0 +1,42 @@
+{
+  "name": "omegacms/commands",
+  "type": "package",
+  "description": "Omega CMS Commands Package",
+  "keywords": [ "omegacms", "framework", "commands"],
+  "homepage": "https://omegacms.github.io",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Adriano Giovannini",
+      "email": "omegacms@outlook.com",
+      "homepage": "https://omegacms.github.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "ext-pcntl": "*",
+    "omegacms/database": "^1.0.0",
+    "symfony/console": "^5.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "symfony/panther": "^0.9.0",
+    "dbrekelmans/bdi": "^0.3.0",
+    "symfony/process": "^5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Omega\\Commands\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Omega\\Commands\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "minimum-stability": "stable"
+}
