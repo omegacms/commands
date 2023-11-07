@@ -33,11 +33,11 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Migrate command class. 
- * 
- * The `MigrateCommand` is used to run database migrations. It looks for migration 
- * files in the specified directory and executes them. You can also use the `--fresh` 
- * option to delete all database tables before running migrations. 
+ * Migrate command class.
+ *
+ * The `MigrateCommand` is used to run database migrations. It looks for migration
+ * files in the specified directory and executes them. You can also use the `--fresh`
+ * option to delete all database tables before running migrations.
  *
  * @category    Omega
  * @package     Omega\Commands
@@ -49,19 +49,19 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class MigrateCommand extends Command
 {
-    /** 
-     * Default command name. 
-     * 
-     * @var string $defaultName Holds the default command name. 
+    /**
+     * Default command name.
+     *
+     * @var string $defaultName Holds the default command name.
      */
     protected static $defaultName = 'migrate';
 
-    /** 
-     * Configures the current command. 
-     * 
-     * This method configures the command description, options, and help information. 
-     * 
-     * @return void 
+    /**
+     * Configures the current command.
+     *
+     * This method configures the command description, options, and help information.
+     *
+     * @return void
      */
     protected function configure() : void
     {
@@ -72,16 +72,16 @@ class MigrateCommand extends Command
     }
 
 
-    /** 
-     * Executes the current command. 
-     * 
-     * This method runs database migrations by looking for migration files and executing 
-     * them in order. It also provides an option to delete all database tables before 
-     * running migrations. 
-     * 
-     * @param  InputInterface  $input  Holds an instance of InputInterface. 
-     * @param  OutputInterface $output Holds an instance of OutputInterface. 
-     * @return int Return 0 if everything went fine, or an exit code. 
+    /**
+     * Executes the current command.
+     *
+     * This method runs database migrations by looking for migration files and executing
+     * them in order. It also provides an option to delete all database tables before
+     * running migrations.
+     *
+     * @param  InputInterface  $input  Holds an instance of InputInterface.
+     * @param  OutputInterface $output Holds an instance of OutputInterface.
+     * @return int Return 0 if everything went fine, or an exit code.
      */
     protected function execute( InputInterface $input, OutputInterface $output ) : int
     {
@@ -129,13 +129,13 @@ class MigrateCommand extends Command
         return Command::SUCCESS;
     }
 
-    /** 
-     * Connect to the database. 
-     * 
-     * This method initializes and connects to the database using the provided 
-     * configuration. 
-     * 
-     * @return AbstractDatabaseAdapter Return an instance of AbstractDatabaseAdapter. 
+    /**
+     * Connect to the database.
+     *
+     * This method initializes and connects to the database using the provided
+     * configuration.
+     *
+     * @return AbstractDatabaseAdapter Return an instance of AbstractDatabaseAdapter.
      */
     private function connection() : AbstractDatabaseAdapter
     {

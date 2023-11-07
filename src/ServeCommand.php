@@ -118,7 +118,7 @@ class ServeCommand extends Command
         $process       = Process::fromShellCommandLine( $serverCommand );
 
         $process->setTimeout( null );
-        
+
         $process->run( function ( $type, $buffer ) use ( $output ) {
             $output->write( $buffer );
         } );
@@ -188,7 +188,7 @@ class ServeCommand extends Command
         } );
 
         $output->writeln( "Serving requests at http://{$host}:{$port}" );
-        
+
         $this->process->wait();
     }
 
