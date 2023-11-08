@@ -71,7 +71,7 @@ class ServeCommand extends Command
      protected function configure() : void
      {
          $this->setDescription( 'Starts a development server' )
-              ->setHelp( 'You can provide an optional host and port for the development server. Please note that this command is designed for Linux and Mac environments.' )
+              ->setHelp( 'You can provide an optional host and port for the development server.' )
               ->addOption( 'host', null, InputOption::VALUE_REQUIRED, 'The host name or IP address to bind the server to' )
               ->addOption( 'port', null, InputOption::VALUE_REQUIRED, 'The port number to listen on' );
      }
