@@ -27,6 +27,7 @@ use function strtoupper;
 use function substr;
 use Omega\Helpers\App;
 use Omega\Helpers\Alias;
+use Omega\Helpers\System;
 use InvalidArgumentException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -100,7 +101,7 @@ class ServeCommand extends Command
             );
         }
 
-        if ( $this->isWin() ) {
+        if ( System::getOperatingSystem() === 'windows' ) {
             $this->startServer( $host, $port, $output );
         } else {
             $this->handleSignals();
@@ -190,10 +191,5 @@ class ServeCommand extends Command
         $output->writeln( "Serving requests at http://{$host}:{$port}" );
 
         $this->process->wait();
-    }
-
-    private function isWin() : bool
-    {
-        return strtoupper( substr( PHP_OS, 0, 3 ) ) === 'WIN';
     }
 }
