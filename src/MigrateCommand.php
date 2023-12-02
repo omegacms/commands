@@ -71,7 +71,6 @@ class MigrateCommand extends Command
             ->setHelp( 'This command looks for all migration files and runs them' );
     }
 
-
     /**
      * Executes the current command.
      *
