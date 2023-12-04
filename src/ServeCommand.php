@@ -145,7 +145,7 @@ class ServeCommand extends Command
             PHP_BINARY,
             "-S",
             "{$host}:{$port}",
-            "{$base}{$separator}server.php",
+            "{$base}{$separator}serve.php",
         ];
     }
 
