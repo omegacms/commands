@@ -31,7 +31,7 @@ use Symfony\Component\Console\Question\ChoiceQuestion;
 /**
  * ConfigureEnvironmentCommand class.
  *
- * This command is responsible for configuring the environment file.
+ * The `EnvironmentCommand` is responsible for configuring the environment file.
  *
  * @category    Omega
  * @package     Omega\Commands
